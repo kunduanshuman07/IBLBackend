@@ -219,7 +219,7 @@ module.exports.triggerPlayerAuction = (req, res, next) => {
 
 module.exports.initializeAuction = async (req, res, next) => {
   try {
-    const { accountId } = req.body
+    const accountId  = "64a3b30f370689302621dbdf"
     // check accountid is provided
     if (!accountId) {
       return res.status(400).json({
@@ -477,7 +477,7 @@ module.exports.postBid = (req, res, next) => {
 module.exports.getData = (req, res, next) => {
   getStore()
     .then((store) => {
-      const { accountId } = store
+      const  accountId  = "64a3b30f370689302621dbdf"
       if (!accountId) {
         return res.status(200).json({
           status: 'ok',
