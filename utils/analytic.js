@@ -48,3 +48,4 @@ exports.updateStatistics = async () => {
     console.log('__error_while_updating_statistics__\n', err)
   }
 }
+// 
