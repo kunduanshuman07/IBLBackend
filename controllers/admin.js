@@ -199,6 +199,7 @@ exports.postImportPlayersFromCsv = async (req, res, next) => {
     // extracting zip
     if (req.files?.zip?.length > 0) {
       const zipPath = req.files.zip[0].path;
+      console.log(zipPath);
       const extractedPath = path.join(
         __dirname,
         "..",
@@ -214,6 +215,7 @@ exports.postImportPlayersFromCsv = async (req, res, next) => {
       // removing zip for saving space
       fs.rmSync(zipPath, { recursive: true, force: true });
     }
+    
 
     // parsing csv
     const csvPath = req.files?.csv[0].path;
@@ -276,9 +278,11 @@ exports.postImportPlayersFromCsv = async (req, res, next) => {
 
       let imageUrl;
       const splits = image ? image.split("/") : [];
+      console.log(splits);
       const filename = splits.length > 0 ? splits[splits.length - 1] : null;
+      console.log(filename);
       if (filename) {
-        imageUrl = "static/images/" + decodeURI(filename);
+        imageUrl = "../static/images/" + decodeURI(filename);
       }
 
       try {
