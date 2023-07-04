@@ -1,0 +1,38 @@
+{
+  "name": "ipl",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js",
+    "start:dev": "nodemon server.js",
+    "build": "cd frontend && npm install && npm run build",
+    "test": "nodemon test.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.1",
+    "compress-images": "^2.0.5",
+    "cookie-parser": "^1.4.6",
+    "csv-writer": "^1.6.0",
+    "csvtojson": "^2.0.10",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "gifsicle": "^5.2.1",
+    "imagemin-pngquant": "^9.0.2",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.8.0",
+    "multer": "^1.4.5-lts.1",
+    "nedb": "^1.8.0",
+    "node-cron": "^3.0.2",
+    "node-stream-zip": "^1.15.0",
+    "pngquant-bin": "^6.0.1",
+    "socket.io": "^4.5.4"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}

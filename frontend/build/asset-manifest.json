@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/static/css/main.b8662d89.css",
+    "main.js": "/static/js/main.cb799ea7.js",
+    "static/js/787.0ba1babe.chunk.js": "/static/js/787.0ba1babe.chunk.js",
+    "static/media/ICL_Logo.svg": "/static/media/ICL_Logo.03ffd056fb7045d61cf93730975c4561.svg",
+    "static/media/nucleo.eot": "/static/media/nucleo.bd5cce8bf40be5947637.eot",
+    "static/media/nucleo.ttf": "/static/media/nucleo.35b08447277ca7bf9f09.ttf",
+    "static/media/nucleo.woff": "/static/media/nucleo.5c65ef4d6434bb8062a3.woff",
+    "static/media/nucleo.woff2": "/static/media/nucleo.6dfb4833e3a0132fd1fc.woff2",
+    "index.html": "/index.html",
+    "main.b8662d89.css.map": "/static/css/main.b8662d89.css.map",
+    "main.cb799ea7.js.map": "/static/js/main.cb799ea7.js.map",
+    "787.0ba1babe.chunk.js.map": "/static/js/787.0ba1babe.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b8662d89.css",
+    "static/js/main.cb799ea7.js"
+  ]
+}
