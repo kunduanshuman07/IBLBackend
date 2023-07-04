@@ -5,7 +5,8 @@ const PlayerSchema = Schema({
   accountId: {
     type: Schema.Types.ObjectId,
     // required: true,
-    default: "1001",
+    default: "64a3b30f370689302621dbdf",
+    // default id is the local id made in the database for account of incedo pune
     ref: 'Account',
   },
   name: {
@@ -20,7 +21,7 @@ const PlayerSchema = Schema({
   },
   gender: {
     type: String,
-    enum: ['Male', 'Female', 'Other'],
+    enum: ['Man', 'Woman', 'Other'],
   },
   // skill: {
   //   type: String,
