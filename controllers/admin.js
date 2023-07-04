@@ -199,7 +199,7 @@ exports.postImportPlayersFromCsv = async (req, res, next) => {
     // extracting zip
     if (req.files?.zip?.length > 0) {
       const zipPath = req.files.zip[0].path;
-      console.log(zipPath);
+      // console.log("zipPath", zipPath);
       const extractedPath = path.join(
         __dirname,
         "..",
@@ -207,6 +207,7 @@ exports.postImportPlayersFromCsv = async (req, res, next) => {
         "extracted-images"
       );
       const destinationPath = path.join(__dirname, "..", "static", "images");
+      // console.log(__dirname);
       await fileUtils.extractZipAndCompressImages(
         zipPath,
         extractedPath,
@@ -235,7 +236,7 @@ exports.postImportPlayersFromCsv = async (req, res, next) => {
         rating,
         gender,
         phoneNumber,
-        image,
+        imageUrl,
       } = row;
 
       try {
@@ -276,15 +277,15 @@ exports.postImportPlayersFromCsv = async (req, res, next) => {
       //   continue
       // }
 
-      let imageUrl;
-      const splits = image ? image.split("/") : [];
-      console.log(splits);
+      // let imageUrl;
+      const splits = imageUrl ? imageUrl.split("/") : [];
+      // console.log(splits);
       const filename = splits.length > 0 ? splits[splits.length - 1] : null;
-      console.log(filename);
+      // console.log(filename);
       if (filename) {
         imageUrl = "../static/images/" + decodeURI(filename);
       }
-
+      // console.log(imageUrl)
       try {
         const player = new Player({
           name,
@@ -298,6 +299,7 @@ exports.postImportPlayersFromCsv = async (req, res, next) => {
           imageUrl,
           auctionStatus: null,
         });
+        // console.log(player);
         await player.save();
       } catch (err) {
         console.log(err.message);
